@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableRow
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp">
+            <EditText
+                android:id="@+id/NumInStream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="210"
+                android:text="Text for speech synthesis (about 10 words)"
+                android:textSize="21sp">
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/SysMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:clickable="true"
+                android:text="System messages\n\n"
+                android:textSize="21sp">
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/VernamKeyInt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:clickable="true"
+                android:onClick="copyToClipboardINT"
+                android:text="Generated Vernam Key in INT (60 numbers)\n\n\n\n"
+                android:textSize="21sp">
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/VernamKeyHex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:clickable="true"
+                android:onClick="copyToClipboardHEX"
+                android:text="Generated Vernam Key in HEX (60 numbers)\n\n\n\n"
+                android:textSize="21sp">
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <ScrollView
+                android:id="@+id/ScrollView01"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/Guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:scrollbars="vertical"
+                android:text="Levice Crypto Freeware https://github.com/vallshmeleff \n\n"
+                android:textSize="21sp">
+            </TextView>
+            </ScrollView>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/btnGenerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonGenerate"
+                android:text="GENERATE">
+            </Button>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonExit"
+                android:text="EXIT">
+            </Button>
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="21sp">
+            </EditText>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>
